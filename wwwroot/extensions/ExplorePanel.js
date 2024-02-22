@@ -357,6 +357,13 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.drawingsButton.style.position = 'absolute';
             this.drawingsButton.style.width = '46%';
             this.drawingsButton.style.height = '38%';
+            this.drawingsButton.style.top = '57%';
+            this.drawingsButton.style.left = '1%';
+            this.instructionsButton.style.position = 'absolute';
+            this.instructionsButton.style.width = '46%';
+            this.instructionsButton.style.height = '38%';
+            this.instructionsButton.style.top = '57%';
+            this.instructionsButton.style.right = '1%';
             this.instructionsButton.style.position = 'absolute';
             this.instructionsButton.style.width = '46%';
             this.instructionsButton.style.height = '38%';
@@ -373,6 +380,13 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.drawingsButton.style.position = 'absolute';
             this.drawingsButton.style.width = '46%';
             this.drawingsButton.style.height = '38%';
+            this.drawingsButton.style.top = '57%';
+            this.drawingsButton.style.left = '1%';
+            this.instructionsButton.style.position = 'absolute';
+            this.instructionsButton.style.width = '46%';
+            this.instructionsButton.style.height = '38%';
+            this.instructionsButton.style.top = '57%';
+            this.instructionsButton.style.right = '1%';
             this.instructionsButton.style.position = 'absolute';
             this.instructionsButton.style.width = '46%';
             this.instructionsButton.style.height = '38%';
