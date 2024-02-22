@@ -86,7 +86,36 @@ async function onModelSelected(viewer, urn) {
                 break;
             default:
                 clearNotification();
-                loadModel(viewer, urn).then(() => {               
+                loadModel(viewer, urn)
+                viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, (x) =>  {
+                
+                    let explodeExtension = viewer.getExtension('Autodesk.Explode');
+                    let orbitExtension = viewer.getExtension('Autodesk.Viewing.FusionOrbit');
+                    let navTools = viewer.getExtension('Autodesk.DefaultTools.NavTools');
+                    let bimWalk = viewer.getExtension('Autodesk.BimWalk');
+                    /* let sectionExtension = viewer.getExtension('Autodesk.Section'); */
+                    let propertiesPanel = viewer.getExtension('Autodesk.PropertiesManager');
+                    let modelStructure = viewer.getExtension('Autodesk.ModelStructure');
+                    let viewCube = viewer.getExtension('Autodesk.ViewCubeUi');
+                    let documentBrowser = viewer.getExtension('Autodesk.DocumentBrowser');
+    
+                    
+                    orbitExtension.unload();
+                    explodeExtension.unload();
+                    navTools.unload();
+                    bimWalk.unload();
+                    /* sectionExtension.unload(); */
+                    propertiesPanel.unload();
+                    modelStructure.unload();
+                    viewCube.unload();
+                    documentBrowser.unload();
+    
+                    let settingsTools = viewer.toolbar.getControl('settingsTools');
+                    let modelTools = viewer.toolbar.getControl('modelTools');
+                    
+                    settingsTools.removeControl('toolbar-settingsTool');
+                    settingsTools.removeControl('toolbar-fullscreenTool');
+                    modelTools.removeControl('toolbar-sectionTool');
                 });
                 break; 
         }
