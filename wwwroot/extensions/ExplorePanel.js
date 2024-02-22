@@ -158,7 +158,7 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
 
         this.drawingsButton = document.createElement('button');
         this.drawingsButton.id = 'drawingsButton';
-        this.drawingsButton.innerHTML = 'Drawings';
+        this.drawingsButton.innerHTML = 'D';
 
         this.drawingsButton.style.position = 'absolute';
         this.drawingsButton.style.width = '46%';
@@ -173,7 +173,7 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
 
         this.instructionsButton = document.createElement('button');
         this.instructionsButton.id = 'instructionsButton';
-        this.instructionsButton.innerHTML = 'Instructions';
+        this.instructionsButton.innerHTML = 'I';
 
         this.instructionsButton.style.position = 'absolute';
         this.instructionsButton.style.width = '46%';
@@ -184,9 +184,6 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
 
         this.container.appendChild(this.instructionsButton);
         
-
-
-
     }
 
     handleElementsColorsGroups() {
