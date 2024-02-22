@@ -161,7 +161,7 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
         this.drawingsButton.innerHTML = 'Drawings';
 
         this.drawingsButton.style.position = 'absolute';
-        this.drawingsButton.style.width = '35%';
+        this.drawingsButton.style.width = '40%';
         this.drawingsButton.style.height = '38%';
         this.drawingsButton.style.top = '57%';
         this.drawingsButton.style.left = '1%';
@@ -176,7 +176,7 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
         this.instructionsButton.innerHTML = 'Instructions';
 
         this.instructionsButton.style.position = 'absolute';
-        this.instructionsButton.style.width = '35%';
+        this.instructionsButton.style.width = '40%';
         this.instructionsButton.style.height = '38%';
         this.instructionsButton.style.top = '57%';
         this.instructionsButton.style.right = '1%';
@@ -352,12 +352,12 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.checkboxLabelZone.style.fontSize = '14px';
             this.checkboxLabelTime.style.fontSize = '14px';
             this.drawingsButton.style.position = 'absolute';
-            this.drawingsButton.style.width = 350 * 0.35 + 'px';
+            this.drawingsButton.style.width = 350 * 0.40 + 'px';
             this.drawingsButton.style.height = 280 * 0.38 + 'px';
             this.drawingsButton.style.top = 280 * 0.57 + 'px';
             this.drawingsButton.style.left = 350 * 0.01 + 'px';
             this.instructionsButton.style.position = 'absolute';
-            this.instructionsButton.style.width = 350 * 0.35 + 'px';
+            this.instructionsButton.style.width = 350 * 0.40 + 'px';
             this.instructionsButton.style.height = 280 * 0.38 + 'px';
             this.instructionsButton.style.top = 280 * 0.57 + 'px';
             this.instructionsButton.style.right = 350 * 0.01 + 'px';
@@ -372,12 +372,12 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.checkboxLabelZone.style.fontSize = '16px';
             this.checkboxLabelTime.style.fontSize = '16px';
             this.drawingsButton.style.position = 'absolute';
-            this.drawingsButton.style.width = 400 * 0.35 + 'px';
+            this.drawingsButton.style.width = 400 * 0.40 + 'px';
             this.drawingsButton.style.height = 320 * 0.38 + 'px';
             this.drawingsButton.style.top = 320 * 0.57 + 'px';
             this.drawingsButton.style.left = 400 * 0.01 + 'px';
             this.instructionsButton.style.position = 'absolute';
-            this.instructionsButton.style.width = 400 * 0.35 + 'px';
+            this.instructionsButton.style.width = 400 * 0.40 + 'px';
             this.instructionsButton.style.height = 320 * 0.38 + 'px';
             this.instructionsButton.style.top = 320 * 0.57 + 'px';
             this.instructionsButton.style.right = 400 * 0.01 + 'px';
