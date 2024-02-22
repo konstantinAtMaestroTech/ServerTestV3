@@ -1,6 +1,8 @@
 const express = require('express');
 const formidable = require('express-formidable');
 const { listObjects, uploadObject, translateObject, getManifest, urnify } = require('../services/aps.js');
+const path = require('path');
+const fs = require('fs');
 
 let router = express.Router();
 
@@ -53,6 +55,18 @@ router.post('/api/models', formidable({ maxFileSize: Infinity }), async function
             name: obj.objectKey,
             urn: urnify(obj.objectId)
         });
+
+        // Define the path to the temp directory and its subdirectories
+        const tempDir = path.join(__dirname, '../temp/', String(urnify(obj.objectId)));
+        const subDirs = ['CSV', 'Drawings', 'Instructions', 'Labels', 'LabelsAppVersion'].map(subDir => path.join(tempDir, subDir));
+
+        // Check if the temp directory exists
+        if (!fs.existsSync(tempDir)) {
+            // If not, create it
+            fs.mkdirSync(tempDir, { recursive: true });
+            // Check and create each subdirectory
+            subDirs.forEach(subDir => {fs.mkdirSync(subDir, { recursive: true })});
+        }
     } catch (err) {
         next(err);
     }

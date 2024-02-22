@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const APS = require('forge-apis');
 const { APS_CLIENT_ID, APS_CLIENT_SECRET, APS_BUCKET } = require('../config.js');
 
@@ -47,6 +48,7 @@ service.listObjects = async () => {
 
 service.uploadObject = async (objectName, filePath) => {
     await service.ensureBucketExists(APS_BUCKET);
+    console.log(objectName);
     const buffer = await fs.promises.readFile(filePath);
     const results = await new APS.ObjectsApi().uploadResources(
         APS_BUCKET,

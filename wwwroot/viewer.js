@@ -1,4 +1,7 @@
 /// import * as Autodesk from "@types/forge-viewer";
+import './extensions/PhasingExtension.js';
+import './extensions/ExploreExtension.js';
+import './extensions/ScanExtension.js';
 
 async function getAccessToken(callback) {
     try {
@@ -18,7 +21,11 @@ export function initViewer(container) {
     return new Promise(function (resolve, reject) {
         Autodesk.Viewing.Initializer({ env: 'AutodeskProduction', getAccessToken }, function () {
             const config = {
-                extensions: ['Autodesk.DocumentBrowser']
+                extensions: ['Autodesk.DocumentBrowser',
+                'PhasingExtension',
+                'ExploreExtension',
+                'ScanExtension',
+            ]
             };
             const viewer = new Autodesk.Viewing.GuiViewer3D(container, config);
             viewer.start();

@@ -86,7 +86,8 @@ async function onModelSelected(viewer, urn) {
                 break;
             default:
                 clearNotification();
-                loadModel(viewer, urn);
+                loadModel(viewer, urn).then(() => {               
+                });
                 break; 
         }
     } catch (err) {
