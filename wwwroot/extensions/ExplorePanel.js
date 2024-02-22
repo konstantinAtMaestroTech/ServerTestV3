@@ -18,6 +18,10 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
     }
 
     initialize() {
+
+        window.addEventListener('resize', this.updateStyles.bind(this));
+        this.updateStyles(); // initial call
+
         this.title = this.createTitleBar(this.titleLabel || this.container.id);
         this.initializeMoveHandlers(this.title);
         this.container.appendChild(this.title);
@@ -222,8 +226,6 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             let currentSelection = this.extension.viewer.getSelection();
             viewer.model.getBulkProperties(currentSelection, { propFilter: ['Maestro_RGB', 'Maestro_Zone'] }, function (props) {
                 let selectionZone = props[0].properties.find(obj => obj.displayName === 'Maestro_Zone').displayValue;
-                console.log(props)
-                console.log('Selection zone', selectionZone);
                 let green = new THREE.Vector4(0, 1, 0, 1); // RGB values are between 0 and 1, alpha is 1
                 viewer.search(selectionZone, function (dbIds) {
                     console.log('Found dbIds', dbIds);
@@ -337,6 +339,37 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             });
         } else {
             this.drawingsButton.onclick = function() {alert('No object selected')};
+        }
+    }
+
+    updateStyles() {
+        let width = window.innerWidth;
+    
+        // Adjust these values as needed
+        let smallScreenSize = 480; // e.g., for smartphones
+        let mediumScreenSize = 768; // e.g., for tablets
+    
+        if (width <= smallScreenSize) {
+            // Styles for small screens
+            this.container.style.width = '100%';
+            this.container.style.height = '100%';
+            this.checkboxLabel.style.fontSize = '14px';
+            this.checkboxLabelZone.style.fontSize = '14px';
+            this.checkboxLabelTime.style.fontSize = '14px';
+            // ... adjust other styles ...
+        } else if (width <= mediumScreenSize) {
+            // Styles for medium screens
+            this.container.style.width = '70%';
+            this.container.style.height = '70%';
+            this.checkboxLabel.style.fontSize = '16px';
+            this.checkboxLabelZone.style.fontSize = '16px';
+            this.checkboxLabelTime.style.fontSize = '16px';
+            // ... adjust other styles ...
+        } else {
+            // Styles for large screens
+            this.container.style.width = (this.options.width || 500) + 'px';
+            this.container.style.height = (this.options.height || 400) + 'px';
+            // ... adjust other styles ...
         }
     }
 
