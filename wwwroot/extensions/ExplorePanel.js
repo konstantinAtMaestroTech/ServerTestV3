@@ -286,6 +286,7 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
         } else {
             this.textPrompt.style.display = 'inline';
             this.labelPlaceholder.src = 'data:image/gif;base64,R0lGODlhAQABAPAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+            this.labelPlaceholder.src = "display: flex; justify-content: center; align-items: center; height: 100vh;"
         }
     }
 
