@@ -13,7 +13,7 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
         this.container.style.top = (options.y || 0) + 'px';
         this.container.style.width = (options.width || 500) + 'px';
         this.container.style.height = (options.height || 400) + 'px';
-        this.container.style.resize = 'none';
+        this.container.style.resize = 'both';
         console.log(this.container);
         this.updateStyles(); // initial call
     }
