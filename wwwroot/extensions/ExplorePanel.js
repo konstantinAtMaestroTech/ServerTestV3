@@ -349,8 +349,8 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
     
         if (width <= smallScreenSize) {
             // Styles for small screens
-            this.container.style.width = '90%';
-            this.container.style.height = '50%';
+            this.container.style.width = 350 + 'px';
+            this.container.style.height = 280 + 'px';
             this.checkboxLabel.style.fontSize = '14px';
             this.checkboxLabelZone.style.fontSize = '14px';
             this.checkboxLabelTime.style.fontSize = '14px';
@@ -361,8 +361,8 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             // ... adjust other styles ...
         } else if (width <= mediumScreenSize) {
             // Styles for medium screens
-            this.container.style.width = '70%';
-            this.container.style.height = '70%';
+            this.container.style.width = 400 + 'px';
+            this.container.style.height = 320 + 'px';
             this.checkboxLabel.style.fontSize = '16px';
             this.checkboxLabelZone.style.fontSize = '16px';
             this.checkboxLabelTime.style.fontSize = '16px';
