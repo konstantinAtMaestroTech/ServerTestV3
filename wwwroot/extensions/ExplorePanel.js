@@ -360,6 +360,8 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.instructionsButton.style.position = 'absolute';
             this.instructionsButton.style.width = '46%';
             this.instructionsButton.style.height = '38%';
+            this.drawingsButton.innerHTML = 'D';
+            this.instructionsButton.innerHTML = 'I';
             // ... adjust other styles ...
         } else if (width <= mediumScreenSize) {
             // Styles for medium screens
@@ -374,6 +376,8 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.instructionsButton.style.position = 'absolute';
             this.instructionsButton.style.width = '46%';
             this.instructionsButton.style.height = '38%';
+            this.drawingsButton.innerHTML = 'D';
+            this.instructionsButton.innerHTML = 'I';
             // ... adjust other styles ...
         } else {
             // Styles for large screens
