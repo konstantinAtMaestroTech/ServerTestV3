@@ -363,6 +363,19 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.instructionsButton.style.right = 350 * 0.01 + 'px';
             this.drawingsButton.innerHTML = 'D';
             this.instructionsButton.innerHTML = 'I';
+
+            this.checkbox.style.width = (this.options.checkboxWidth || 20) + 'px';
+            this.checkbox.style.height = (this.options.checkboxHeight || 18) + 'px';
+            this.checkbox.style.borderRadius = (this.options.borderRadius || 4) + 'px';
+
+            this.checkboxZone.style.width = (this.options.checkboxWidth || 20) + 'px';
+            this.checkboxZone.style.height = (this.options.checkboxHeight || 18) + 'px';
+            this.checkboxZone.style.borderRadius = (this.options.borderRadius || 4) + 'px';
+
+            this.checkboxTime.style.width = (this.options.checkboxWidth || 20) + 'px';
+            this.checkboxTime.style.height = (this.options.checkboxHeight || 18) + 'px';
+            this.checkboxTime.style.borderRadius = (this.options.borderRadius || 4) + 'px';
+
             // ... adjust other styles ...
         } else if (width <= mediumScreenSize) {
             // Styles for medium screens
@@ -386,6 +399,18 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.instructionsButton.style.height = '38%';
             this.drawingsButton.innerHTML = 'D';
             this.instructionsButton.innerHTML = 'I';
+
+            this.checkbox.style.width = (this.options.checkboxWidth || 24) + 'px';
+            this.checkbox.style.height = (this.options.checkboxHeight || 22) + 'px';
+            this.checkbox.style.borderRadius = (this.options.borderRadius || 6) + 'px';
+
+            this.checkboxZone.style.width = (this.options.checkboxWidth || 24) + 'px';
+            this.checkboxZone.style.height = (this.options.checkboxHeight || 22) + 'px';
+            this.checkboxZone.style.borderRadius = (this.options.borderRadius || 6) + 'px';
+
+            this.checkboxTime.style.width = (this.options.checkboxWidth || 24) + 'px';
+            this.checkboxTime.style.height = (this.options.checkboxHeight || 22) + 'px';
+            this.checkboxTime.style.borderRadius = (this.options.borderRadius || 6) + 'px';
             // ... adjust other styles ...
         } else {
             // Styles for large screens
