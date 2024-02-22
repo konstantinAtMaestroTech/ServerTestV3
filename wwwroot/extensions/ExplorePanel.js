@@ -354,8 +354,10 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.checkboxLabel.style.fontSize = '14px';
             this.checkboxLabelZone.style.fontSize = '14px';
             this.checkboxLabelTime.style.fontSize = '14px';
+            this.drawingsButton.style.position = 'absolute';
             this.drawingsButton.style.width = '46%';
             this.drawingsButton.style.height = '38%';
+            this.instructionsButton.style.position = 'absolute';
             this.instructionsButton.style.width = '46%';
             this.instructionsButton.style.height = '38%';
             // ... adjust other styles ...
@@ -366,8 +368,10 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.checkboxLabel.style.fontSize = '16px';
             this.checkboxLabelZone.style.fontSize = '16px';
             this.checkboxLabelTime.style.fontSize = '16px';
+            this.drawingsButton.style.position = 'absolute';
             this.drawingsButton.style.width = '46%';
             this.drawingsButton.style.height = '38%';
+            this.instructionsButton.style.position = 'absolute';
             this.instructionsButton.style.width = '46%';
             this.instructionsButton.style.height = '38%';
             // ... adjust other styles ...
