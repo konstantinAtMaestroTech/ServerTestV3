@@ -361,8 +361,8 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.instructionsButton.style.height = 280 * 0.38 + 'px';
             this.instructionsButton.style.top = 280 * 0.57 + 'px';
             this.instructionsButton.style.right = 350 * 0.01 + 'px';
-            this.drawingsButton.innerHTML = 'D';
-            this.instructionsButton.innerHTML = 'I';
+            this.drawingsButton.innerHTML = 'Drawing';
+            this.instructionsButton.innerHTML = 'Instruction';
 
             this.checkbox.style.width = (this.options.checkboxWidth || 20) + 'px';
             this.checkbox.style.height = (this.options.checkboxHeight || 18) + 'px';
@@ -397,8 +397,8 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
             this.instructionsButton.style.position = 'absolute';
             this.instructionsButton.style.width = '46%';
             this.instructionsButton.style.height = '38%';
-            this.drawingsButton.innerHTML = 'D';
-            this.instructionsButton.innerHTML = 'I';
+            this.drawingsButton.innerHTML = 'Drawing';
+            this.instructionsButton.innerHTML = 'Instruction';
 
             this.checkbox.style.width = (this.options.checkboxWidth || 24) + 'px';
             this.checkbox.style.height = (this.options.checkboxHeight || 22) + 'px';
