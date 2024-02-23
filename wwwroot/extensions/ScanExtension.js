@@ -86,6 +86,11 @@ class ScanExtension extends Autodesk.Viewing.Extension {
             let panel = document.getElementById('PropertyPanel');
             panel.style.display = 'block';
 
+            let Exbutton = document.querySelector('#button');
+            if (Exbutton) {
+                Exbutton.remove();
+            }
+
             let button = document.createElement('button');
             let header = document.querySelector('#header');
 
