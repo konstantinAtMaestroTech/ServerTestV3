@@ -35,10 +35,11 @@ export class ExplorePanel extends Autodesk.Viewing.UI.DockingPanel {
         this.labelPlaceholder = document.createElement('img');
         this.labelPlaceholder.id = 'labelPlaceholder';
         this.labelPlaceholder.style.display = 'flex';
+        this.labelPlaceholder.style.flexDirection = 'row';
         this.labelPlaceholder.style.justifyContent = 'center';
         this.labelPlaceholder.style.alignItems = 'flex-start';
         this.labelPlaceholder.style.width = '100%';
-        this.labelPlaceholder.style.height = '45%';
+        this.labelPlaceholder.style.height = '40%';
         this.labelPlaceholder.src = 'data:image/gif;base64,R0lGODlhAQABAPAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
         this.labelPlaceholder.style.position = 'relative';
